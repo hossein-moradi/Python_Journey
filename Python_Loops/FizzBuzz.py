@@ -16,7 +16,3 @@ for i in range(1,101):
         print("Buzz")
     else:
         print(i)
-
-x = 15
-print(15 % 3 == 0 and 15 % 5 == 0)
-print(15 % 3 == 0 and 15 % 5 == 0)
