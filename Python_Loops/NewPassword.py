@@ -27,16 +27,14 @@ number_of_numbers = int(input(f"How many numbers would you like?\n"))
 # So here we use the for loop and random functions to get random letters, numbers and symbols
 for x in range(number_of_letters):
     password.append(random.choice(letters))
-    new_password = something.join(password)
 
 for y in range(number_of_symbols):
     password.append(random.choice(symbols))
-    new_password = something.join(password)
 
 for z in range(number_of_numbers):
     password.append(random.choice(numbers))
-    new_password = something.join(password)
 
 # Print the result
+new_password = something.join(password)
 print(f"Here is your new password: {new_password}")
 
