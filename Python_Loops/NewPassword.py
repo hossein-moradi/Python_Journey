@@ -1,7 +1,7 @@
 # So this exercise is about a password creating
-
 import random
 
+# Variables:
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
            'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
            'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
@@ -13,27 +13,30 @@ numbers = ['0', '1', '2', '3', '4', '5', '6', '7',
            '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*',
            '+']
+# First we get the randoms into a list
 password = []
+# Then we just join somthing into it and we get the result
+something = ''
+
+# We get the inputs here, we ask how many the user wants and we put into our variables
 print("Welcome to the PyPassword Generator!")
 number_of_letters = int(input("How many letters would you like in your password?\n"))
 number_of_symbols = int(input(f"How many symbols would you like?\n"))
 number_of_numbers = int(input(f"How many numbers would you like?\n"))
 
+# So here we use the for loop and random functions to get random letters, numbers and symbols
 for x in range(number_of_letters):
     password.append(random.choice(letters))
+    new_password = something.join(password)
 
 for y in range(number_of_symbols):
-    password.append(random.choices(symbols))
+    password.append(random.choice(symbols))
+    new_password = something.join(password)
 
 for z in range(number_of_numbers):
-    password.append(random.choices(numbers))
-print(password)
+    password.append(random.choice(numbers))
+    new_password = something.join(password)
 
+# Print the result
+print(f"Here is your new password: {new_password}")
 
-
-
-
-
-
-# print(numbers[number_of_symbols])
-# print(numbers[number_of_numbers])
