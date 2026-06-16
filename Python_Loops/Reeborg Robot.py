@@ -43,3 +43,20 @@ while not at_goal():
 
 
 # Now i am going to delete and retry everything from scratch
+
+# Check this out i got my first infinit loop XD
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+def jump():
+    turn_left()
+    while not front_is_clear():
+        move()
+
+while not at_goal():
+    if front_is_clear() :
+        move()
+    else :
+        jump()
+# Robot will go around itself forever
